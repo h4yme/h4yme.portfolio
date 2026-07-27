@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Devicons — tech stack logos -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="imgages/favicon-32.png" type="image/png" sizes="32x32">
@@ -80,19 +82,19 @@
     <div class="wrap">
       <div class="focus-grid" data-reveal>
         <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A5.5 5.5 0 0 1 17.2 8.1 4 4 0 0 1 17 18H7Z"/></svg>
-          <h3>Cloud computing</h3>
-          <p>Getting hands-on with AWS, Google Cloud, and Microsoft Azure — learning how real infrastructure is provisioned, secured, and kept running.</p>
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          <h3>Web &amp; Enterprise Development</h3>
+          <p>Building full-stack features and responsive interfaces for enterprise systems using ASP.NET MVC, C#, and modern web technologies.</p>
         </div>
         <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3v4M16 3v4M4 8h16v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8Z"/><path d="M9 13l1.5 1.5L9 16M13 16h3"/></svg>
-          <h3>Java development</h3>
-          <p>OOP-first development for desktop apps and web systems — the language he keeps coming back to for anything that needs to be built solid.</p>
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <h3>Mobile App Development</h3>
+          <p>Creating functional Android applications featuring real-time tracking, gamified adaptive difficulty, and REST API integration.</p>
         </div>
         <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>
-          <h3>PC building &amp; hardware</h3>
-          <p>Builds and troubleshoots his own machines — an interest that keeps his software instincts grounded in how the hardware underneath actually behaves.</p>
+          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <h3>Database &amp; Cloud Architecture</h3>
+          <p>Designing and optimizing database schemas with T-SQL, and leveraging cloud platforms like Microsoft Azure to keep infrastructure scalable and secure.</p>
         </div>
       </div>
     </div>
@@ -285,35 +287,135 @@
   </section>
 
   <!-- TOOLKIT -->
-  <section id="toolkit" class="surface-ink">
+  <section id="toolkit" class="surface-ink tk-section">
     <div class="wrap">
       <div class="section-head" data-reveal>
         <span class="eyebrow">toolkit</span>
         <h2>What it's built with.</h2>
+        <p class="lede" style="margin-top:8px;">Languages, frameworks, and tools I use to build real things.</p>
       </div>
-      <div data-reveal style="display:grid; grid-template-columns:repeat(3, 1fr); gap:32px;">
-        <div>
-          <p class="log-group-label" style="color:var(--cyan);">languages &amp; databases</p>
-          <div class="tag-row">
-            <span class="tag">C#</span><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">T-SQL</span><span class="tag">PL/SQL</span><span class="tag">Microsoft SQL Server</span>
+    </div>
+
+    <!-- ROW 1 -->
+    <div class="tk-carousel-row" data-reveal>
+      <div class="tk-carousel-viewport">
+        <div class="tk-carousel-track">
+          <!-- GROUP 1 -->
+          <div class="tk-carousel-group">
+            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
+            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
+          </div>
+          <!-- GROUP 2 -->
+          <div class="tk-carousel-group" aria-hidden="true">
+            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
+            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
+          </div>
+          <!-- GROUP 3 -->
+          <div class="tk-carousel-group" aria-hidden="true">
+            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
+            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
+          </div>
+          <!-- GROUP 4 -->
+          <div class="tk-carousel-group" aria-hidden="true">
+            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
+            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
+            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
+            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
           </div>
         </div>
-        <div>
-          <p class="log-group-label" style="color:var(--cyan);">frameworks &amp; tools</p>
-          <div class="tag-row">
-            <span class="tag">ASP.NET MVC</span><span class="tag">Bootstrap</span><span class="tag">Crystal Reports</span><span class="tag">Android Studio</span><span class="tag">Microsoft Azure</span><span class="tag">Firebase</span>
+      </div>
+    </div>
+
+    <!-- ROW 2 -->
+    <div class="tk-carousel-row" data-reveal>
+      <div class="tk-carousel-viewport">
+        <div class="tk-carousel-track tk-carousel-reverse">
+          <!-- GROUP 1 -->
+          <div class="tk-carousel-group">
+            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
+            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tk-logo-card"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
+            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
           </div>
-        </div>
-        <div>
-          <p class="log-group-label" style="color:var(--cyan);">core competencies</p>
-          <div class="tag-row">
-            <span class="tag">T-SQL Stored Procedures</span><span class="tag">Web Development</span><span class="tag">Mobile Development</span><span class="tag">Cloud Computing</span><span class="tag">DB Design &amp; Optimization</span>
+          <!-- GROUP 2 -->
+          <div class="tk-carousel-group" aria-hidden="true">
+            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
+            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tk-logo-card"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
+            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
+          </div>
+          <!-- GROUP 3 -->
+          <div class="tk-carousel-group" aria-hidden="true">
+            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
+            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tk-logo-card"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
+            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
+          </div>
+          <!-- GROUP 4 -->
+          <div class="tk-carousel-group" aria-hidden="true">
+            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
+            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
+            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
+            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
+            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            <div class="tk-logo-card"><i class="devicon-github-original colored"></i><span>GitHub</span></div>
+            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
+            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
+            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   <!-- JOURNEY / BUILD LOG -->
   <section id="journey" class="surface-paper">
     <div class="wrap">
@@ -373,7 +475,7 @@
             <div class="log-body">
               <span class="range">2020 — Present</span>
               <h4>Independent &amp; School Projects</h4>
-              <p class="desc">Self-directed and group work behind LiteRise, Nimbly, the Transport Management System, Vauzye, and the LLIS school website — most of what's in the work section above started here.</p>
+              <p class="desc">Self-directed and group work behind Sync, LiteRise, Nimbly, the Transport Management System, Vauzye, and the LLIS school website — most of what's in the work section above started here.</p>
             </div>
           </div>
         </div>
@@ -390,12 +492,12 @@
             </div>
           </div>
           <div class="log-entry is-current">
-            <span class="log-tag">2017 →</span>
+            <span class="log-tag">2023 →</span>
             <span class="log-node"></span>
             <div class="log-body">
-              <span class="range">2017 — Present</span>
-              <h4>PC building &amp; troubleshooting</h4>
-              <p class="desc">Started long before the degree did — still the fastest way to understand a system from the hardware up.</p>
+              <span class="range">2023 — Present</span>
+              <h4>Database Design &amp; Optimization</h4>
+              <p class="desc">Diving deeper into T-SQL and Microsoft SQL Server to build more robust, scalable, and efficient backend architectures for enterprise systems.</p>
             </div>
           </div>
         </div>

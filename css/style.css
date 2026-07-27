@@ -273,6 +273,7 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
   flex-wrap: wrap;
 }
 
+
 .btn {
   font-family: var(--mono);
   font-size: 0.82rem;
@@ -777,4 +778,96 @@ section { padding: clamp(64px, 9vw, 120px) 0; }
 [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---------- Toolkit Carousel ---------- */
+/* ---------- Toolkit Carousel ---------- */
+#toolkit .section-head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px; /* Give it more breathing room before the carousel */
+}
+#toolkit .section-head .lede {
+  max-width: 600px; /* Keep the paragraph readable and centered */
+  margin-left: auto;
+  margin-right: auto;
+}
+.tk-carousel-row {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.tk-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.tk-carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+}
+
+.tk-carousel-group {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+  animation: scroll-carousel 35s linear infinite;
+}
+
+.tk-carousel-track.tk-carousel-reverse .tk-carousel-group {
+  animation-direction: reverse;
+}
+
+.tk-carousel-track:hover .tk-carousel-group {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-carousel {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% - 20px)); }
+}
+
+.tk-logo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 220px;
+  height: 90px;
+  background: var(--panel);
+  border-radius: 12px;
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: background 0.25s ease;
+  cursor: default;
+}
+
+.tk-logo-card:hover {
+  background: rgba(255,255,255,0.06);
+}
+
+.tk-logo-card i {
+  font-size: 38px;
+}
+
+@media (max-width: 680px) {
+  .tk-logo-card {
+    width: 180px;
+    height: 75px;
+    font-size: 1rem;
+    gap: 10px;
+  }
+  .tk-logo-card i {
+    font-size: 30px;
+  }
 }
