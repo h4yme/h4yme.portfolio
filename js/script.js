@@ -113,47 +113,95 @@
     if (e.key === "Escape") closeLb();
   });
 
-  /* Contact form -> EmailJS (same service already public in the site's repo) */
-  var form = document.getElementById("contactForm");
-  if (form && window.emailjs) {
-    emailjs.init({ publicKey: "RgDxuPfshgy24B846" });
+  /* Toast Helper */
+  function showToast(type, title, message) {
+    var container = document.getElementById('toast-container');
+    if (!container) {
+      container = document.createElement('div');
+      container.id = 'toast-container';
+      container.className = 'toast-container';
+      document.body.appendChild(container);
+    }
+
+    var toast = document.createElement('div');
+    toast.className = 'toast toast-' + type;
+
+    var iconSvg = type === 'success' 
+      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>'
+      : type === 'warning'
+      ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>'
+      : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>';
+
+    toast.innerHTML = 
+      '<div class="toast-icon">' + iconSvg + '</div>' +
+      '<div class="toast-content">' +
+        '<div class="toast-title">' + title + '</div>' +
+        '<div class="toast-message">' + message + '</div>' +
+      '</div>' +
+      '<button class="toast-close">&times;</button>';
+
+    container.appendChild(toast);
+    void toast.offsetWidth; // Trigger reflow
+    toast.classList.add('show');
+
+    function removeToast() {
+      toast.classList.remove('show');
+      toast.classList.add('hiding');
+      setTimeout(function() {
+        if (toast.parentNode) toast.parentNode.removeChild(toast);
+      }, 400);
+    }
+
+    toast.querySelector('.toast-close').addEventListener('click', removeToast);
+    setTimeout(removeToast, 5000);
   }
+
+  /* Contact form -> EmailJS */
+  var form = document.getElementById("contactForm");
   if (form) {
+    form.setAttribute('novalidate', 'novalidate');
+
+    if (window.emailjs) {
+      emailjs.init({ publicKey: "EFAIax4PAVF6BJK5B" });
+    }
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      var submitBtn = document.getElementById("submitBtn");
+
       var name = document.getElementById("name2").value.trim();
       var email = document.getElementById("email").value.trim();
       var message = document.getElementById("message").value.trim();
-      var submitBtn = document.getElementById("submitBtn");
 
       if (!name || !email || !message) {
-        alert("Please fill out all fields.");
+        showToast('warning', 'Missing Information', 'Please fill out all fields before sending.');
         return;
       }
+
       if (!window.emailjs) {
-        alert("Message form isn't connected yet — email jaimesbusiness2004@gmail.com directly.");
+        showToast('error', 'Configuration Missing', 'EmailJS is not loaded.');
         return;
       }
 
       submitBtn.textContent = "Sending...";
       submitBtn.disabled = true;
 
-      emailjs.send("service_1q30jux", "template_tzkku8c", { name: name, email: email, message: message }).then(
-        function () {
-          submitBtn.textContent = "Message sent";
+      emailjs.sendForm("service_om1e8rp", "template_j5psi1t", form)
+        .then(function () {
+          submitBtn.textContent = "Message sent!";
           form.reset();
+          showToast('success', 'Message Sent Successfully', 'I will get back to you shortly.');
+          
           setTimeout(function () {
             submitBtn.textContent = "Send message";
             submitBtn.disabled = false;
-          }, 2200);
-        },
-        function (error) {
+          }, 3000);
+        }, function (error) {
           console.error("EmailJS error:", error);
-          alert("Couldn't send right now — email jaimesbusiness2004@gmail.com directly.");
+          showToast('error', 'Connection Failed', 'Please check your internet & try again.');
           submitBtn.textContent = "Send message";
           submitBtn.disabled = false;
-        }
-      );
+        });
     });
   }
 })();
