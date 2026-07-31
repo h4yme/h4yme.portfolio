@@ -204,4 +204,17 @@
         });
     });
   }
+  /* Skeleton Loading Removal */
+  document.querySelectorAll('img.skeleton').forEach(function(img) {
+    if (img.complete) {
+      img.classList.remove('skeleton');
+    } else {
+      img.addEventListener('load', function() {
+        img.classList.remove('skeleton');
+      });
+      img.addEventListener('error', function() {
+        img.classList.remove('skeleton'); // Remove skeleton even if image fails to load
+      });
+    }
+  });
 })();
