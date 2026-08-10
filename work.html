@@ -1,78 +1,231 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+(function(){var t=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jaimes Manicar — Software Developer</title>
-<meta name="description" content="Portfolio of Jaimes Aldrich Trecero Manicar — IT graduate and former Software Developer Intern at Excellence Appliance Technologies, building LiteRise, Nimbly, and other real-world systems." />
+<title>Projects — Jaimes Aldrich Manicar</title>
+<meta name="description" content="Projects and systems built by Jaimes Aldrich Manicar — mobile apps, web platforms, and enterprise systems." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Devicons — tech stack logos -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="imgages/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">   
 </head>
-<body class="bryl-layout">
+<body>
 
-<aside class="bryl-sidebar">
-  <div class="sidebar-top">
-    <a href="index.html" class="brand">jaimes<br>manicar</a>
-    <nav class="bryl-nav">
-      <ul id="navLinks">
-        <li><a href="work.html">01 &mdash; work</a></li>
-        <li><a href="achievements.html">02 &mdash; achievements</a></li>
-        <li><a href="toolkit.html">03 &mdash; toolkit</a></li>
-        <li><a href="experience.html">04 &mdash; experience</a></li>
-        <li><a href="recommendations.html">05 &mdash; recommendations</a></li>
-        <li><a href="contact.html">06 &mdash; contact</a></li>
+<div class="site-layout">
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <a href="index.html" class="brand-name">Jaimes Aldrich Manicar</a>
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+      <svg class="icon-hamburger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg class="icon-close hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <a href="index.html" class="brand-name">Jaimes Aldrich<br>Manicar</a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="work.html" class="active">→ Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="toolkit.html">Tech Stack</a></li>
+      </ul>
+      <div class="sidebar-divider"></div>
+      <ul>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="recommendations.html">Recommendations</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </div>
-  <div class="sidebar-bottom">
-    <div class="bryl-contact-links">
-      <p class="micro-label" style="margin-bottom: 12px; color: var(--text-faint);">For work, collabs & everything else, reach me at</p>
-      <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> manicar.jaimesaldrich.trecero@gmail.com</a>
-    </div>
-  </div>
-</aside>
 
-<main id="top" class="bryl-main">
-<!-- WORK -->
-  <section class="surface-ink">
-    <div class="wrap">
-      <div class="focus-grid" data-reveal>
-        <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <h3>Web &amp; Enterprise Development</h3>
-          <p>Building full-stack features and responsive interfaces for enterprise systems using ASP.NET MVC, C#, and modern web technologies.</p>
-        </div>
-        <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          <h3>Mobile App Development</h3>
-          <p>Creating functional Android applications featuring real-time tracking, gamified adaptive difficulty, and REST API integration.</p>
-        </div>
-        <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          <h3>Database &amp; Cloud Architecture</h3>
-          <p>Designing and optimizing database schemas with T-SQL, and leveraging cloud platforms like Microsoft Azure to keep infrastructure scalable and secure.</p>
+        <div class="sidebar-footer">
+      <div class="sidebar-controls">
+        <div class="theme-switcher">
+          <button class="theme-btn" data-theme-val="system" title="System Theme">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </button>
+          <button class="theme-btn" data-theme-val="light" title="Light Mode">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <button class="theme-btn" data-theme-val="dark" title="Dark Mode">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
         </div>
       </div>
+      <div class="sidebar-email-box">
+        <p class="sidebar-email-label">For work, collabs &amp; everything else, reach me at</p>
+        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com" class="sidebar-email-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>manicar.jaimesaldrich.trecero@gmail.com</span>
+        </a>
+      </div>
     </div>
-  </section>
-</main>
+  </aside>
 
-</div> <!-- End of bryl-layout -->
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="content-column">
 
-<div class="lb" id="lightbox">
-  <button class="lb-close" id="lbClose">✕</button>
-  <img src="" alt="" id="lbImg">
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <h1 class="page-title">projects</h1>
+        <p class="page-subtitle">Systems, shipped — mobile apps, web platforms, and enterprise tools built from scratch.</p>
+      </div>
+
+      <!-- FEATURED PROJECTS (hero cards) -->
+      <section class="featured-projects">
+
+        <!-- Sync — most recent, has a live site -->
+        <div class="feat-card">
+          <div class="feat-card-inner">
+            <div class="feat-left">
+              <div class="feat-icon">
+                <img src="images/syncmock.png" alt="Sync" />
+              </div>
+            </div>
+            <div class="feat-right">
+              <div class="feat-badges">
+                <span class="feat-badge feat-badge--pill">( Most Recent )</span>
+                <span class="feat-badge">AI Health Tech</span>
+                <span class="feat-badge">Live</span>
+              </div>
+              <h2 class="feat-title">Sync</h2>
+              <p class="feat-desc">An AI-powered health companion app that syncs your wellbeing data and provides smart daily insights to build healthier habits through intelligent tracking.</p>
+              <div class="feat-actions">
+                <a href="https://sync-app-opal.vercel.app/" target="_blank" rel="noopener" class="feat-btn feat-btn--store">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Visit Website
+                </a>
+                <a href="https://sync-app-opal.vercel.app/" target="_blank" rel="noopener" class="feat-btn">
+                  ↓ Download Free
+                </a>
+              </div>
+              <div class="feat-meta">
+                <span class="feat-tag">health tech</span>
+                <span class="feat-tag">ai · android</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LiteRise -->
+        <div class="feat-card">
+          <div class="feat-card-inner">
+            <div class="feat-left">
+              <div class="feat-icon">
+                <img src="images/mockup (2).png" alt="LiteRise" />
+              </div>
+            </div>
+            <div class="feat-right">
+              <div class="feat-badges">
+                <span class="feat-badge feat-badge--pill">( Best Paper 2026 )</span>
+                <span class="feat-badge">SYNERGY Conference</span>
+                <span class="feat-badge">QCU</span>
+              </div>
+              <h2 class="feat-title">LiteRise &mdash; Adaptive Reading</h2>
+              <p class="feat-desc">A gamified adaptive reading platform using Item Response Theory — built with PHP REST APIs, C# ASP.NET MVC Teacher Dashboard, MS SQL Server, and Microsoft Azure cloud hosting. Awarded Best Research Paper at SYNERGY 2026.</p>
+              <div class="feat-meta">
+                <span class="feat-tag">php (api)</span>
+                <span class="feat-tag">c# asp.net mvc</span>
+                <span class="feat-tag">ms sql · azure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nimbly -->
+        <div class="feat-card">
+          <div class="feat-card-inner">
+            <div class="feat-left">
+              <div class="feat-icon">
+                <img src="images/nimblymock.png" alt="Nimbly" />
+              </div>
+            </div>
+            <div class="feat-right">
+              <div class="feat-badges">
+                <span class="feat-badge feat-badge--pill">( Fintech )</span>
+                <span class="feat-badge">Azure Integration</span>
+              </div>
+              <h2 class="feat-title">Nimbly Loan Calculator</h2>
+              <p class="feat-desc">An Android financial calculator with Microsoft Azure integration via REST API — multiple loan types, amortization schedules, and offline data handling for when connectivity isn't guaranteed.</p>
+              <div class="feat-meta">
+                <span class="feat-tag">fintech</span>
+                <span class="feat-tag">azure · rest api</span>
+                <span class="feat-tag">android</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+
+
+      <!-- OTHER PROJECTS LIST -->
+
+      <section class="projects-list-section">
+        <div class="projects-list">
+
+          <a href="#" class="project-list-row">
+            <div class="plr-thumb">
+              <img src="images/buseasemock.png" alt="BusEase" />
+            </div>
+            <div class="plr-left">
+              <span class="plr-name">BusEase</span>
+            </div>
+            <div class="plr-right">
+              <span class="plr-category">OPERATIONS · DESKTOP</span>
+              <p class="plr-desc">A desktop transport management system for Robinsons Novaliches Bus Terminal — scheduling, ticketing, and real-time tracking.</p>
+            </div>
+            <span class="plr-arrow">›</span>
+          </a>
+
+          <a href="#" class="project-list-row">
+            <div class="plr-thumb">
+              <img src="images/vauzyemock.png" alt="Vauzye" />
+            </div>
+            <div class="plr-left">
+              <span class="plr-name">Vauzye</span>
+            </div>
+            <div class="plr-right">
+              <span class="plr-category">TRAVEL BOOKING · WEB</span>
+              <p class="plr-desc">An online travel booking and information site for flights and hotel stays — full booking workflows and responsive layout.</p>
+            </div>
+            <span class="plr-arrow">›</span>
+          </a>
+
+          <a href="#" class="project-list-row">
+            <div class="plr-thumb">
+              <img src="images/llismock.png" alt="LLIS School Website" />
+            </div>
+            <div class="plr-left">
+              <span class="plr-name">LLIS School Website</span>
+            </div>
+            <div class="plr-right">
+              <span class="plr-category">EDUCATION · WEB</span>
+              <p class="plr-desc">An informational website for Leandro Locsin Integrated School — news, announcements, events, and media galleries.</p>
+            </div>
+            <span class="plr-arrow">›</span>
+          </a>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

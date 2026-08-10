@@ -1,144 +1,203 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+(function(){var t=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jaimes Manicar — Software Developer</title>
-<meta name="description" content="Portfolio of Jaimes Aldrich Trecero Manicar — IT graduate and former Software Developer Intern at Excellence Appliance Technologies, building LiteRise, Nimbly, and other real-world systems." />
+<title>Experience — Jaimes Aldrich Manicar</title>
+<meta name="description" content="Work experience and education timeline of Jaimes Aldrich Manicar — Software Developer Intern at Excellence Appliance Technologies, research lead, and IT graduate." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Devicons — tech stack logos -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="imgages/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">   
 </head>
-<body class="bryl-layout">
+<body>
 
-<aside class="bryl-sidebar">
-  <div class="sidebar-top">
-    <a href="index.html" class="brand">jaimes<br>manicar</a>
-    <nav class="bryl-nav">
-      <ul id="navLinks">
-        <li><a href="work.html">01 &mdash; work</a></li>
-        <li><a href="achievements.html">02 &mdash; achievements</a></li>
-        <li><a href="toolkit.html">03 &mdash; toolkit</a></li>
-        <li><a href="experience.html">04 &mdash; experience</a></li>
-        <li><a href="recommendations.html">05 &mdash; recommendations</a></li>
-        <li><a href="contact.html">06 &mdash; contact</a></li>
+<div class="site-layout">
+
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <a href="index.html" class="brand-name">Jaimes Aldrich Manicar</a>
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+      <svg class="icon-hamburger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg class="icon-close hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </header>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <a href="index.html" class="brand-name">Jaimes Aldrich<br>Manicar</a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="work.html">Projects</a></li>
+        <li><a href="experience.html" class="active">→ Experience</a></li>
+        <li><a href="toolkit.html">Tech Stack</a></li>
+      </ul>
+      <div class="sidebar-divider"></div>
+      <ul>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="recommendations.html">Recommendations</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </div>
-  <div class="sidebar-bottom">
-    <div class="bryl-contact-links">
-      <p class="micro-label" style="margin-bottom: 12px; color: var(--text-faint);">For work, collabs & everything else, reach me at</p>
-      <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> manicar.jaimesaldrich.trecero@gmail.com</a>
-    </div>
-  </div>
-</aside>
 
-<main id="top" class="bryl-main">
-<!-- JOURNEY / BUILD LOG -->
-  <section id="journey" class="surface-paper">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">build log</span>
-        <h2>The journey so far.</h2>
-        <p class="lede">Education, hands-on experience, and the interests that keep pulling him back in — read like a changelog.</p>
-      </div>
-
-      <div data-reveal>
-        <p class="log-group-label">education</p>
-        <div class="log">
-          <div class="log-entry">
-            <span class="log-tag">2022</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">August 2022 — July 2026</span>
-              <h4>BS in Information Technology, Graduate</h4>
-              <p class="org">Quezon City University</p>
-            </div>
-          </div>
-          <div class="log-entry">
-            <span class="log-tag">2020</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2020 — 2022</span>
-              <h4>Technical Vocational — ICT, Computer Programming</h4>
-              <p class="org">Leandro Locsin Integrated School</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="log-group-label">experience</p>
-        <div class="log">
-          <div class="log-entry">
-            <span class="log-tag">2025</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">September 2025 — April 2026</span>
-              <h4>Software Developer Intern</h4>
-              <p class="org">Excellence Appliance Technologies, Inc. · Quezon City</p>
-              <p class="desc">Developed and maintained an in-house enterprise system on ASP.NET MVC and Microsoft SQL Server for sales, inventory, and e-commerce processing. Wrote T-SQL stored procedures for location management, promos, and order approval workflows, built full-stack features end to end, and generated Crystal Reports for sales performance.</p>
-            </div>
-          </div>
-          <div class="log-entry">
-            <span class="log-tag">2022</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2022 — 2026</span>
-              <h4>IT Student, Quezon City University</h4>
-              <p class="desc">Hands-on coursework across programming, cybersecurity, and cloud computing.</p>
-            </div>
-          </div>
-          <div class="log-entry is-current">
-            <span class="log-tag">2020 →</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2020 — Present</span>
-              <h4>Independent &amp; School Projects</h4>
-              <p class="desc">Self-directed and group work behind Sync, LiteRise, Nimbly, the Transport Management System, Vauzye, and the LLIS school website — most of what's in the work section above started here.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="log-group-label">interests</p>
-        <div class="log">
-          <div class="log-entry is-current">
-            <span class="log-tag">2023 →</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2023 — Present</span>
-              <h4>Cloud computing</h4>
-              <p class="desc">Leaning toward cloud platforms as the next specialization — already integrating Microsoft Azure into production apps, with AWS and Google Cloud next on the list.</p>
-            </div>
-          </div>
-          <div class="log-entry is-current">
-            <span class="log-tag">2023 →</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2023 — Present</span>
-              <h4>Database Design &amp; Optimization</h4>
-              <p class="desc">Diving deeper into T-SQL and Microsoft SQL Server to build more robust, scalable, and efficient backend architectures for enterprise systems.</p>
-            </div>
-          </div>
+        <div class="sidebar-footer">
+      <div class="sidebar-controls">
+        <div class="theme-switcher">
+          <button class="theme-btn" data-theme-val="system" title="System Theme">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </button>
+          <button class="theme-btn" data-theme-val="light" title="Light Mode">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <button class="theme-btn" data-theme-val="dark" title="Dark Mode">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
         </div>
       </div>
+      <div class="sidebar-email-box">
+        <p class="sidebar-email-label">For work, collabs &amp; everything else, reach me at</p>
+        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com" class="sidebar-email-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>manicar.jaimesaldrich.trecero@gmail.com</span>
+        </a>
+      </div>
     </div>
-  </section>
-</main>
+  </aside>
 
-</div> <!-- End of bryl-layout -->
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="content-column">
 
-<div class="lb" id="lightbox">
-  <button class="lb-close" id="lbClose">✕</button>
-  <img src="" alt="" id="lbImg">
+      <!-- PAGE HEADER -->
+      <div class="page-header">
+        <h1 class="page-title">experience</h1>
+        <p class="page-subtitle">Six years building across software development and full-stack systems — from enterprise ASP.NET platforms to AI-driven mobile applications and research-backed tools.</p>
+      </div>
+
+      <!-- TIMELINE CONTAINER -->
+      <div class="timeline-container">
+
+        <!-- COMPANY 1: Excellence Appliance Technologies -->
+        <div class="tl-item">
+          <div class="tl-badge">EATI</div>
+          <div class="tl-company-header">
+            <h2 class="tl-company-name">Excellence Appliance Technologies</h2>
+            <p class="tl-company-meta">Internship &middot; 8 mos<br>Quezon City, National Capital Region, Philippines &middot; On-site</p>
+          </div>
+
+          <div class="tl-role-block">
+            <span class="tl-role-node"></span>
+            <h3 class="tl-role-title">Software Developer Intern</h3>
+            <p class="tl-role-date">SEP 2025 &mdash; APR 2026 &middot; 8 MOS</p>
+            
+            <p class="tl-role-desc">Developed and maintained an in-house enterprise system on ASP.NET MVC and Microsoft SQL Server for sales, inventory, and e-commerce processing.</p>
+            <p class="tl-role-desc">Wrote complex T-SQL stored procedures for location management, promotional campaigns, and order approval workflows, delivering robust backend logic for core business operations.</p>
+            <p class="tl-role-desc">Integrated Crystal Reports for executive sales performance tracking and optimized SQL query execution times for high-volume transactions.</p>
+
+            <div class="tl-role-tags">
+              <span class="tl-tag">ASP.NET MVC</span>
+              <span class="tl-tag">C#</span>
+              <span class="tl-tag">T-SQL</span>
+              <span class="tl-tag">SQL Server</span>
+              <span class="tl-tag">Crystal Reports</span>
+              <span class="tl-tag tl-tag--more">+2 skills</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPANY 2: SYNERGY Conference & QCU Research -->
+        <div class="tl-item">
+          <div class="tl-badge">SYRC</div>
+          <div class="tl-company-header">
+            <h2 class="tl-company-name">SYNERGY Conference &amp; Research Lead</h2>
+            <p class="tl-company-meta">Research &amp; Development &middot; 9 mos<br>Quezon City University &middot; Hybrid</p>
+          </div>
+
+          <div class="tl-role-block">
+            <span class="tl-role-node"></span>
+            <h3 class="tl-role-title">Capstone Research Lead Developer</h3>
+            <p class="tl-role-date">AUG 2025 &mdash; APR 2026 &middot; 9 MOS</p>
+            
+            <p class="tl-role-desc">Architected and deployed LiteRise, a gamified adaptive reading application for Grade 3 elementary learners utilizing Item Response Theory (IRT) following the <strong>Modified Waterfall SDLC</strong> methodology.</p>
+            <p class="tl-role-desc">Engineered PHP REST APIs for mobile data sync, built the administrative teacher dashboard on C# ASP.NET MVC, and managed database logic on MS SQL Server.</p>
+            <p class="tl-role-desc">Configured cloud hosting and deployment on Microsoft Azure. Personally presented the research paper at the SYNERGY 2026 National Conference, winning <strong>Best Research Paper</strong>.</p>
+
+            <div class="tl-role-tags">
+              <span class="tl-tag">Modified Waterfall SDLC</span>
+              <span class="tl-tag">PHP (REST API)</span>
+              <span class="tl-tag">C# ASP.NET MVC</span>
+              <span class="tl-tag">MS SQL Server</span>
+              <span class="tl-tag">Microsoft Azure</span>
+              <span class="tl-tag tl-tag--more">+2 skills</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPANY 3: Quezon City University -->
+        <div class="tl-item">
+          <div class="tl-badge">QCU</div>
+          <div class="tl-company-header">
+            <h2 class="tl-company-name">Quezon City University</h2>
+            <p class="tl-company-meta">Education &middot; 4 yrs<br>Quezon City, Philippines &middot; On-site</p>
+          </div>
+
+          <div class="tl-role-block">
+            <span class="tl-role-node"></span>
+            <h3 class="tl-role-title">BS in Information Technology</h3>
+            <p class="tl-role-date">AUG 2022 &mdash; JUL 2026 &middot; 4 YRS</p>
+            
+            <p class="tl-role-desc">Completed a 4-year degree in Information Technology focused on software development, database management, and web/mobile application architecture.</p>
+            <p class="tl-role-desc">Developed multiple academic system projects, full-stack web applications, and database-driven desktop tools using Modified Waterfall and Agile software development lifecycles.</p>
+            <p class="tl-role-desc">Actively collaborated with student developer teams, applying SDLC phase gates, database optimization, and modern UI/UX design principles across all deliverables.</p>
+
+            <div class="tl-role-tags">
+              <span class="tl-tag">Modified Waterfall</span>
+              <span class="tl-tag">Software Engineering</span>
+              <span class="tl-tag">Cloud Systems</span>
+              <span class="tl-tag">Mobile Engineering</span>
+              <span class="tl-tag tl-tag--more">+3 skills</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COMPANY 4: Leandro Locsin Integrated School -->
+        <div class="tl-item">
+          <div class="tl-badge">LLIS</div>
+          <div class="tl-company-header">
+            <h2 class="tl-company-name">Leandro Locsin Integrated School</h2>
+            <p class="tl-company-meta">Senior High School &middot; 2 yrs<br>Quezon City, Philippines &middot; On-site</p>
+          </div>
+
+          <div class="tl-role-block">
+            <span class="tl-role-node"></span>
+            <h3 class="tl-role-title">Technical Vocational — ICT, Computer Programming</h3>
+            <p class="tl-role-date">JUN 2020 &mdash; APR 2022 &middot; 2 YRS</p>
+            
+            <p class="tl-role-desc">Specialized in computer programming fundamentals, database concepts, and responsive web design techniques.</p>
+
+            <div class="tl-role-tags">
+              <span class="tl-tag">Computer Programming</span>
+              <span class="tl-tag">Web Fundamentals</span>
+              <span class="tl-tag">Database Logic</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

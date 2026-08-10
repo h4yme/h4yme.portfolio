@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="en">
 <head>
+<script>
+(function(){var t=localStorage.getItem('theme');if(t==='light'||(t!=='dark'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches)){document.documentElement.setAttribute('data-theme','light');}})();
+</script>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Jaimes Manicar — Software Developer</title>
+<title>Jaimes Aldrich Manicar — Software Developer</title>
 <meta name="description" content="Portfolio of Jaimes Aldrich Trecero Manicar — IT graduate and former Software Developer Intern at Excellence Appliance Technologies, building LiteRise, Nimbly, and other real-world systems." />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 </head>
@@ -16,40 +19,55 @@
 
 <div class="site-layout">
 
+  <!-- MOBILE HEADER -->
+  <header class="mobile-header">
+    <a href="index.html" class="brand-name">Jaimes Aldrich Manicar</a>
+    <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+      <svg class="icon-hamburger" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      <svg class="icon-close hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </header>
+
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-brand">
-      <a href="index.html" class="brand-name">Bryl Lim</a>
+      <a href="index.html" class="brand-name">Jaimes Aldrich<br>Manicar</a>
     </div>
 
     <nav class="sidebar-nav">
       <ul>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="achievements.html">Blog</a></li>
-        <li><a href="toolkit.html">Store</a></li>
+        <li><a href="work.html">Projects</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="toolkit.html">Tech Stack</a></li>
       </ul>
       <div class="sidebar-divider"></div>
       <ul>
-        <li><a href="experience.html">Github</a></li>
-        <li><a href="recommendations.html">Consulting</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="recommendations.html">Recommendations</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="sidebar-footer">
-      <div class="sidebar-status">
-        <span class="status-dot"></span>
-        <span class="status-text">For work, collabs &amp; everything else, reach me at</span>
+        <div class="sidebar-footer">
+      <div class="sidebar-controls">
+        <div class="theme-switcher">
+          <button class="theme-btn" data-theme-val="system" title="System Theme">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </button>
+          <button class="theme-btn" data-theme-val="light" title="Light Mode">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          </button>
+          <button class="theme-btn" data-theme-val="dark" title="Dark Mode">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+          </button>
+        </div>
       </div>
-      <div class="sidebar-social">
-        <a href="https://github.com/h4yme" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://linkedin.com/in/jmanicar" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-      <div class="sidebar-email">
-        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com">manicar.jaimesaldrich.trecero@gmail.com</a>
-      </div>
-      <div class="sidebar-typing">
-        <span class="typing-label">typing cmd</span>
-        <span class="typing-key">⌘ / K</span>
+      <div class="sidebar-email-box">
+        <p class="sidebar-email-label">For work, collabs &amp; everything else, reach me at</p>
+        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com" class="sidebar-email-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <span>manicar.jaimesaldrich.trecero@gmail.com</span>
+        </a>
       </div>
     </div>
   </aside>
@@ -61,10 +79,10 @@
       <!-- HERO -->
       <section class="hero-section">
         <div class="hero-photo">
-          <img src="images/ManicarPic.JPG" alt="Jaimes Manicar" />
+          <img src="images/ManicarPic.JPG" alt="Jaimes Aldrich Manicar" />
         </div>
         <div class="hero-text">
-          <h1 class="hero-name">Jaimes Manicar</h1>
+          <h1 class="hero-name">Jaimes Aldrich Manicar</h1>
           <p class="hero-bio">I'm a full-stack developer. I build modern web &amp; mobile apps, and these days I'm focused on cloud architecture.</p>
           <p class="hero-bio">Right now I'm building tools and figuring out system operations. I love turning rough ideas into things people actually use.</p>
           <div class="hero-links">
@@ -73,8 +91,6 @@
             <a href="https://linkedin.com/in/jmanicar" target="_blank" rel="noopener">linkedin ↗</a>
             <span class="link-sep">/</span>
             <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com">email ↗</a>
-            <span class="link-sep">/</span>
-            <a href="work.html">mail ↗</a>
           </div>
         </div>
       </section>
@@ -83,37 +99,236 @@
       <section class="stats-section">
         <div class="stats-grid">
           <div class="stat-item">
-            <span class="stat-num">6+</span>
-            <span class="stat-label">YEARS LEARNING</span>
+            <span class="stat-num">6+ <sup class="stat-arrow">↗</sup></span>
+            <span class="stat-label">Years Learning</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">300+</span>
-            <span class="stat-label">HOURS DEV</span>
+            <span class="stat-num">300+ <sup class="stat-arrow">↗</sup></span>
+            <span class="stat-label">Hours Dev</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">1</span>
-            <span class="stat-label">RESEARCH AWARD</span>
+            <span class="stat-num">1 <sup class="stat-arrow">↗</sup></span>
+            <span class="stat-label">Research Award</span>
           </div>
           <div class="stat-item">
-            <span class="stat-num">5</span>
-            <span class="stat-label">SYSTEMS SHIPPED</span>
+            <span class="stat-num">5 <sup class="stat-arrow">↗</sup></span>
+            <span class="stat-label">Systems Shipped</span>
           </div>
         </div>
       </section>
 
-      <!-- GITHUB MATRIX -->
-      <section class="github-section">
+      <!-- PROJECTS SUMMARY -->
+      <section class="home-section">
         <div class="section-header">
-          <span class="section-label">07 — github</span>
-          <a href="https://github.com/h4yme" target="_blank" rel="noopener" class="section-link">@H4YME ↗</a>
+          <span class="section-label">01 &mdash; projects</span>
+          <a href="work.html" class="section-link">ALL PROJECTS ↗</a>
         </div>
-        <div class="github-card" id="github-matrix-container" data-username="h4yme">
-          <div class="github-graph-wrapper">
-            <div id="github-matrix">
-              <span class="loading-text">Loading graph...</span>
+
+        <div class="deck-carousel" id="projectDeck">
+
+          <div class="deck-card" data-index="0">
+            <div class="deck-badges">
+              <span class="deck-badge">( Health Tech )</span>
+              <span class="deck-badge">AI</span>
+              <span class="deck-badge">Android</span>
+            </div>
+            <div class="deck-card-body">
+              <div class="deck-icon">
+                <img src="images/syncmock.png" alt="Sync icon" />
+              </div>
+              <div class="deck-info">
+                <h3 class="deck-title">Sync</h3>
+                <p class="deck-desc">An AI-powered health companion app that syncs your wellbeing data and provides smart insights for daily health decisions.</p>
+              </div>
+            </div>
+            <div class="deck-meta">
+              <span class="deck-type">android app</span>
+              <a href="work.html" class="deck-cta">View Project ↗</a>
             </div>
           </div>
-          <div class="github-footer">
+
+          <div class="deck-card" data-index="1">
+            <div class="deck-badges">
+              <span class="deck-badge deck-badge--featured">( Best Paper 2026 )</span>
+              <span class="deck-badge">EdTech</span>
+              <span class="deck-badge">IRT</span>
+            </div>
+            <div class="deck-card-body">
+              <div class="deck-icon">
+                <img src="images/mockup (2).png" alt="LiteRise icon" />
+              </div>
+              <div class="deck-info">
+                <h3 class="deck-title">LiteRise</h3>
+                <p class="deck-desc">Adaptive reading platform built with PHP REST APIs, C# ASP.NET MVC Teacher Dashboard, MS SQL Server & Azure — awarded Best Paper at SYNERGY 2026.</p>
+              </div>
+            </div>
+            <div class="deck-meta">
+              <span class="deck-type">php · asp.net mvc · ms sql · azure</span>
+              <a href="work.html" class="deck-cta">View Project ↗</a>
+            </div>
+          </div>
+
+          <div class="deck-card" data-index="2">
+            <div class="deck-badges">
+              <span class="deck-badge">( Fintech )</span>
+              <span class="deck-badge">Azure</span>
+              <span class="deck-badge">REST API</span>
+            </div>
+            <div class="deck-card-body">
+              <div class="deck-icon">
+                <img src="images/nimblymock.png" alt="Nimbly icon" />
+              </div>
+              <div class="deck-info">
+                <h3 class="deck-title">Nimbly</h3>
+                <p class="deck-desc">An Android loan calculator with Microsoft Azure integration — multiple loan types, amortization schedules, and offline data handling.</p>
+              </div>
+            </div>
+            <div class="deck-meta">
+              <span class="deck-type">android app</span>
+              <a href="work.html" class="deck-cta">View Project ↗</a>
+            </div>
+          </div>
+
+          <div class="deck-card" data-index="3">
+            <div class="deck-badges">
+              <span class="deck-badge">( Operations )</span>
+              <span class="deck-badge">Java</span>
+              <span class="deck-badge">Desktop</span>
+            </div>
+            <div class="deck-card-body">
+              <div class="deck-icon">
+                <img src="images/buseasemock.png" alt="BusEase icon" />
+              </div>
+              <div class="deck-info">
+                <h3 class="deck-title">BusEase</h3>
+                <p class="deck-desc">A desktop transport management system for Robinsons Novaliches Bus Terminal — scheduling, ticketing, and real-time tracking.</p>
+              </div>
+            </div>
+            <div class="deck-meta">
+              <span class="deck-type">desktop app</span>
+              <a href="work.html" class="deck-cta">View Project ↗</a>
+            </div>
+          </div>
+
+          <div class="deck-card" data-index="4">
+            <div class="deck-badges">
+              <span class="deck-badge">( Travel Booking )</span>
+              <span class="deck-badge">PHP</span>
+              <span class="deck-badge">Bootstrap</span>
+            </div>
+            <div class="deck-card-body">
+              <div class="deck-icon">
+                <img src="images/vauzyemock.png" alt="Vauzye icon" />
+              </div>
+              <div class="deck-info">
+                <h3 class="deck-title">Vauzye</h3>
+                <p class="deck-desc">An online travel booking site for flights and hotels — full booking workflows, travel guides, and a fully responsive layout.</p>
+              </div>
+            </div>
+            <div class="deck-meta">
+              <span class="deck-type">website</span>
+              <a href="work.html" class="deck-cta">View Project ↗</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SUMMARY -->
+      <section class="home-section">
+        <div class="section-header">
+          <span class="section-label">02 &mdash; experience</span>
+          <a href="experience.html" class="section-link">FULL HISTORY ↗</a>
+        </div>
+        <div class="exp-table">
+          <div class="exp-row">
+            <span class="exp-year">2025</span>
+            <span class="exp-role">Software Developer Intern</span>
+            <span class="exp-company">Excellence Appliance Technologies</span>
+          </div>
+          <div class="exp-row">
+            <span class="exp-year">2026</span>
+            <span class="exp-role">Capstone Research Lead Developer</span>
+            <span class="exp-company">SYNERGY Conference, QCU</span>
+          </div>
+          <div class="exp-row">
+            <span class="exp-year">2022&ndash;2026</span>
+            <span class="exp-role">Information Technology Student</span>
+            <span class="exp-company">Quezon City University</span>
+          </div>
+          <div class="exp-row exp-row--stack">
+            <div class="exp-stack-header">
+              <span class="exp-year">Tech Stack</span>
+              <a href="toolkit.html" class="section-link">VIEW ALL &nearr;</a>
+            </div>
+            <div class="exp-stack-row">
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET</span>
+              <span class="tag">Java</span>
+              <span class="tag">Android</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Azure</span>
+              <span class="tag">PHP</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RECOMMENDATIONS SUMMARY -->
+      <section class="home-section">
+        <div class="section-header">
+          <span class="section-label">03 &mdash; recommendations</span>
+          <a href="recommendations.html" class="section-link">ALL RECOMMENDATIONS ↗</a>
+        </div>
+        <div class="reco-grid">
+
+          <div class="reco-card">
+            <p class="reco-quote">"Has been an incredible teammate and the best developer friend I've had during school projects. His technical expertise and dedication are unmatched — he consistently took the lead and ensured our projects were completed successfully."</p>
+            <div class="reco-person">
+              <div class="reco-avatar reco-avatar--initials">RS</div>
+              <div>
+                <b>Ronaldo Saligao</b>
+                <span>Quezon City University · 11/30/2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reco-card">
+            <p class="reco-quote">"Has been an invaluable partner in project making. We've spent countless hours debugging code and brainstorming ideas together. His sharp mind and problem-solving skills kept me motivated, even during the toughest challenges."</p>
+            <div class="reco-person">
+              <div class="reco-avatar reco-avatar--initials">KL</div>
+              <div>
+                <b>Kevin Landicho</b>
+                <span>Quezon City University · 9/10/2024</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="reco-card">
+            <p class="reco-quote">"A trustworthy leader who makes sure everyone in the group is responsible for their work, and that no one feels rushed when they're doing it."</p>
+            <div class="reco-person">
+              <div class="reco-avatar reco-avatar--initials">BL</div>
+              <div>
+                <b>Brylle Lupang</b>
+                <span>Quezon City University · 12/01/2024</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- GITHUB MATRIX -->
+      <section class="home-section">
+        <div class="section-header">
+          <span class="section-label">04 &mdash; github</span>
+          <a href="https://github.com/h4yme" target="_blank" rel="noopener" class="section-link">@H4YME &nearr;</a>
+        </div>
+        <div class="github-section-body" id="github-matrix-container" data-username="h4yme">
+          <div id="github-matrix" class="github-matrix-dots">
+            <span class="loading-text">LOADING CONTRIBUTIONS...</span>
+          </div>
+          <div class="github-footer-text">
             <span id="github-total-contributions">CALCULATING CONTRIBUTIONS...</span>
           </div>
         </div>
