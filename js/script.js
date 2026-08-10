@@ -247,7 +247,7 @@
       var svgWidth = 52 * cellSize;
       var svgHeight = 7 * cellSize;
       
-      var svg = '<svg width="100%" viewBox="0 0 ' + svgWidth + ' ' + svgHeight + '" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="max-width: ' + svgWidth + 'px; overflow: visible;">';
+      var svg = '<svg width="100%" viewBox="0 0 ' + svgWidth + ' ' + svgHeight + '" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="max-width: 100%; height: auto; overflow: visible; display: block;">';
       
       for (var col = 0; col < 52; col++) {
         for (var row = 0; row < 7; row++) {
@@ -258,23 +258,23 @@
           var cx = col * cellSize + (cellSize / 2);
           var cy = row * cellSize + (cellSize / 2);
           
-          var r = 1.5;
-          var opacity = 0.25;
+          var r = 2;
+          var opacity = 0.2;
           
           // Use GitHub's native intensity level (0-4) if available, otherwise fallback to count
           var level = day.intensity !== undefined ? parseInt(day.intensity) : null;
           
           if (level !== null) {
-             if (level === 1) { r = 2.5; opacity = 0.7; }
-             else if (level === 2) { r = 3.5; opacity = 0.85; }
-             else if (level === 3) { r = 4.8; opacity = 1; }
-             else if (level === 4) { r = 6; opacity = 1; }
+             if (level === 1) { r = 3; opacity = 0.6; }
+             else if (level === 2) { r = 4.5; opacity = 0.8; }
+             else if (level === 3) { r = 5.5; opacity = 1; }
+             else if (level === 4) { r = 6.5; opacity = 1; }
           } else {
              var count = day.count || 0;
-             if (count > 0 && count <= 3) { r = 2.5; opacity = 0.7; }
-             else if (count > 3 && count <= 6) { r = 3.5; opacity = 0.85; }
-             else if (count > 6 && count <= 12) { r = 4.8; opacity = 1; }
-             else if (count > 12) { r = 6; opacity = 1; }
+             if (count > 0 && count <= 3) { r = 3; opacity = 0.6; }
+             else if (count > 3 && count <= 6) { r = 4.5; opacity = 0.8; }
+             else if (count > 6 && count <= 12) { r = 5.5; opacity = 1; }
+             else if (count > 12) { r = 6.5; opacity = 1; }
           }
           
           svg += '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" opacity="'+opacity+'" />';
