@@ -9,108 +9,121 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<!-- Devicons — tech stack logos -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="imgages/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">   
 </head>
-<body class="bryl-layout">
+<body>
 
-<aside class="bryl-sidebar">
-  <div class="sidebar-top">
-    <a href="index.html" class="brand">jaimes<br>manicar</a>
-    <nav class="bryl-nav">
-      <ul id="navLinks">
-        <li><a href="work.html">01 &mdash; work</a></li>
-        <li><a href="achievements.html">02 &mdash; achievements</a></li>
-        <li><a href="toolkit.html">03 &mdash; toolkit</a></li>
-        <li><a href="experience.html">04 &mdash; experience</a></li>
-        <li><a href="recommendations.html">05 &mdash; recommendations</a></li>
-        <li><a href="contact.html">06 &mdash; contact</a></li>
+<div class="site-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <a href="index.html" class="brand-name">Bryl Lim</a>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="achievements.html">Blog</a></li>
+        <li><a href="toolkit.html">Store</a></li>
+      </ul>
+      <div class="sidebar-divider"></div>
+      <ul>
+        <li><a href="experience.html">Github</a></li>
+        <li><a href="recommendations.html">Consulting</a></li>
       </ul>
     </nav>
-  </div>
-  <div class="sidebar-bottom">
-    <div class="bryl-contact-links">
-      <p class="micro-label" style="margin-bottom: 12px; color: var(--text-faint);">For work, collabs & everything else, reach me at</p>
-      <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> manicar.jaimesaldrich.trecero@gmail.com</a>
-    </div>
-  </div>
-</aside>
 
-<main id="top" class="bryl-main">
-
-  <!-- HERO (BRYLLIM LAYOUT) -->
-  <section class="hero">
-    <div class="hero-media">
-      <img src="images/ManicarPic.JPG" alt="Jaimes Manicar" />
-    </div>
-    <div class="hero-content">
-      <h1>Jaimes Manicar</h1>
-      <p class="lede">IT graduate at Quezon City University, interned as a Software Developer at Excellence Appliance Technologies. I build things like LiteRise — an award-winning adaptive reading app piloted in real classrooms.</p>
-      <p class="lede">Right now I'm building tools and figuring out cloud architecture. I love turning rough ideas into systems people actually use.</p>
-      <div class="hero-links">
-        <a href="https://github.com/h4yme" target="_blank">github ↗</a> /
-        <a href="https://linkedin.com/in/jmanicar" target="_blank">linkedin ↗</a> /
-        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com">email ↗</a>
+    <div class="sidebar-footer">
+      <div class="sidebar-status">
+        <span class="status-dot"></span>
+        <span class="status-text">For work, collabs &amp; everything else, reach me at</span>
+      </div>
+      <div class="sidebar-social">
+        <a href="https://github.com/h4yme" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/jmanicar" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <div class="sidebar-email">
+        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com">manicar.jaimesaldrich.trecero@gmail.com</a>
+      </div>
+      <div class="sidebar-typing">
+        <span class="typing-label">typing cmd</span>
+        <span class="typing-key">⌘ / K</span>
       </div>
     </div>
-  </section>
+  </aside>
 
-  <!-- STATS -->
-  <section>
-    <div class="status-strip" data-reveal>
-      <div class="stat">
-        <div class="num"><span class="mono-num" data-count="6">0</span></div>
-        <div class="label">years of learning</div>
-      </div>
-      <div class="stat">
-        <div class="num"><span class="mono-num" data-count="300">0</span>+</div>
-        <div class="label">hours logged</div>
-      </div>
-      <div class="stat">
-        <div class="num"><span class="mono-num" data-count="1">0</span></div>
-        <div class="label">research award</div>
-      </div>
-      <div class="stat">
-        <div class="num"><span class="mono-num" data-count="5">0</span></div>
-        <div class="label">systems shipped</div>
-      </div>
-    </div>
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <div class="content-column">
 
-<!-- GITHUB ACTIVITY (BRYL MINIMAL) -->
-      <div class="bryl-github-card" id="github-matrix-container" data-reveal data-username="h4yme">
-        <div class="bryl-header">
-          <span class="bryl-title">07 — github</span>
-          <a href="https://github.com/h4yme" target="_blank" rel="noopener" class="bryl-link">@H4YME ↗</a>
+      <!-- HERO -->
+      <section class="hero-section">
+        <div class="hero-photo">
+          <img src="images/ManicarPic.JPG" alt="Jaimes Manicar" />
         </div>
-        
-        <div class="bryl-graph-wrapper">
-          <div id="github-matrix">
-            <span style="font-family: var(--mono); font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px;">Loading graph...</span>
+        <div class="hero-text">
+          <h1 class="hero-name">Jaimes Manicar</h1>
+          <p class="hero-bio">I'm a full-stack developer. I build modern web &amp; mobile apps, and these days I'm focused on cloud architecture.</p>
+          <p class="hero-bio">Right now I'm building tools and figuring out system operations. I love turning rough ideas into things people actually use.</p>
+          <div class="hero-links">
+            <a href="https://github.com/h4yme" target="_blank" rel="noopener">github ↗</a>
+            <span class="link-sep">/</span>
+            <a href="https://linkedin.com/in/jmanicar" target="_blank" rel="noopener">linkedin ↗</a>
+            <span class="link-sep">/</span>
+            <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com">email ↗</a>
+            <span class="link-sep">/</span>
+            <a href="work.html">mail ↗</a>
           </div>
         </div>
-        
-        <div class="bryl-footer">
-          <span class="bryl-meta" id="github-total-contributions">CALCULATING CONTRIBUTIONS...</span>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats-section">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-num">6+</span>
+            <span class="stat-label">YEARS LEARNING</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">300+</span>
+            <span class="stat-label">HOURS DEV</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">1</span>
+            <span class="stat-label">RESEARCH AWARD</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">5</span>
+            <span class="stat-label">SYSTEMS SHIPPED</span>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!-- GITHUB MATRIX -->
+      <section class="github-section">
+        <div class="section-header">
+          <span class="section-label">07 — github</span>
+          <a href="https://github.com/h4yme" target="_blank" rel="noopener" class="section-link">@H4YME ↗</a>
+        </div>
+        <div class="github-card" id="github-matrix-container" data-username="h4yme">
+          <div class="github-graph-wrapper">
+            <div id="github-matrix">
+              <span class="loading-text">Loading graph...</span>
+            </div>
+          </div>
+          <div class="github-footer">
+            <span id="github-total-contributions">CALCULATING CONTRIBUTIONS...</span>
+          </div>
+        </div>
+      </section>
 
     </div>
-  </section>
-</main>
+  </main>
 
-</div> <!-- End of bryl-layout -->
-
-<div class="lb" id="lightbox">
-  <button class="lb-close" id="lbClose">✕</button>
-  <img src="" alt="" id="lbImg">
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
