@@ -983,3 +983,66 @@ img.skeleton {
   0% { background-position: 200% 0; }
   100% { background-position: -200% 0; }
 }
+/* ---------- GitHub Activity Section ---------- */
+.github-activity-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .github-activity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gh-card {
+  background: rgba(18, 22, 29, 0.4);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+
+.gh-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(86, 208, 195, 0.03) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.gh-stats-img {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.gh-graph-container {
+  overflow-x: auto;
+  padding-bottom: 10px;
+  /* Custom scrollbar for graph */
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+.gh-graph-container::-webkit-scrollbar {
+  height: 6px;
+}
+.gh-graph-container::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 10px;
+}
+
+.gh-graph-img {
+  min-width: 680px;
+  width: 100%;
+  /* Filter magic: invert light theme, rotate hue to cyan, increase brightness/contrast */
+  filter: invert(0.92) hue-rotate(180deg) brightness(1.25) contrast(1.1);
+  mix-blend-mode: screen;
+}
