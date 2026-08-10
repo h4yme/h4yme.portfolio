@@ -1080,8 +1080,6 @@ img.skeleton {
 
 .bryl-graph-wrapper {
   width: 100%;
-  display: flex;
-  justify-content: center;
   overflow-x: auto;
   scrollbar-width: none; /* Hide scrollbar for a cleaner look */
 }
@@ -1089,8 +1087,14 @@ img.skeleton {
   display: none;
 }
 
+#github-matrix {
+  width: 100%;
+  min-width: 624px; /* Ensure it doesn't shrink too much on mobile, allowing horizontal scroll */
+}
+
 #github-matrix svg {
   display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
-  /* Bryl uses true black on white, or white on dark. Portfolio is dark, so dots will be white */
 }
