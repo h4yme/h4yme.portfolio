@@ -216,26 +216,32 @@
     try {
       var data;
       try {
-        var res = await fetch('https://github-contributions.vercel.app/api/v1/' + username);
+        // Primary: Our live Vercel Serverless Function (100% accurate, no CORS)
+        var res = await fetch('/api/github?username=' + username);
         if (!res.ok) throw new Error('Primary API failed');
         data = await res.json();
       } catch (e) {
-        console.warn("Primary API blocked by CORS, using Vercel proxy...");
-        var res2 = await fetch('/api/github?username=' + username);
+        console.warn("Primary API failed (maybe running locally?), using stale fallback...");
+        var res2 = await fetch('https://github-contributions.vercel.app/api/v1/' + username);
         if (!res2.ok) throw new Error('Proxy API failed');
-        data = await res2.json();
+        
+        // Normalize fallback data
+        var rawData = await res2.json();
+        var today = new Date();
+        var validDays = rawData.contributions.filter(function(d) { return new Date(d.date) <= today; });
+        var pastYearDays = validDays.slice(0, 364);
+        pastYearDays.reverse();
+        var total = pastYearDays.reduce(function(sum, d) { return sum + d.count; }, 0);
+        
+        data = { total: total, contributions: pastYearDays };
       }
       
-      var today = new Date();
-      var validDays = data.contributions.filter(function(d) {
-        return new Date(d.date) <= today;
-      });
+      var pastYearDays = data.contributions;
+      if (pastYearDays.length > 364) {
+        pastYearDays = pastYearDays.slice(-364);
+      }
       
-      var pastYearDays = validDays.slice(0, 364);
-      pastYearDays.reverse();
-      
-      var total = pastYearDays.reduce(function(sum, d) { return sum + d.count; }, 0);
-      totalEl.textContent = total.toLocaleString() + ' CONTRIBUTIONS IN THE LAST YEAR';
+      totalEl.textContent = (data.total || 0).toLocaleString() + ' CONTRIBUTIONS IN THE LAST YEAR';
       
       var cellSize = 14;
       var svgWidth = 52 * cellSize;
@@ -255,12 +261,21 @@
           var r = 1.5;
           var opacity = 0.25;
           
-          // Fallback to evaluating count directly if intensity string is weird
-          var count = day.count;
-          if (count > 0 && count <= 3) { r = 2.5; opacity = 0.7; }
-          else if (count > 3 && count <= 6) { r = 3.5; opacity = 0.85; }
-          else if (count > 6 && count <= 12) { r = 4.8; opacity = 1; }
-          else if (count > 12) { r = 6; opacity = 1; }
+          // Use GitHub's native intensity level (0-4) if available, otherwise fallback to count
+          var level = day.intensity !== undefined ? parseInt(day.intensity) : null;
+          
+          if (level !== null) {
+             if (level === 1) { r = 2.5; opacity = 0.7; }
+             else if (level === 2) { r = 3.5; opacity = 0.85; }
+             else if (level === 3) { r = 4.8; opacity = 1; }
+             else if (level === 4) { r = 6; opacity = 1; }
+          } else {
+             var count = day.count || 0;
+             if (count > 0 && count <= 3) { r = 2.5; opacity = 0.7; }
+             else if (count > 3 && count <= 6) { r = 3.5; opacity = 0.85; }
+             else if (count > 6 && count <= 12) { r = 4.8; opacity = 1; }
+             else if (count > 12) { r = 6; opacity = 1; }
+          }
           
           svg += '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" opacity="'+opacity+'" />';
         }
