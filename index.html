@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <!-- Devicons — tech stack logos -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <link rel="stylesheet" href="css/style.css">
@@ -16,26 +16,31 @@
 <link rel="icon" href="imgages/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">   
 </head>
-<body>
+<body class="bryl-layout">
 
-<header class="site-header">
-  <div class="wrap">
-    <a href="#top" class="brand">jaimes<span class="dot">.</span>manicar</a>
-    <nav>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#work">~/work</a></li>
-        <li><a href="#achievements">~/achievements</a></li>
-        <li><a href="#toolkit">~/toolkit</a></li>
-        <li><a href="#journey">~/journey</a></li>
-        <li><a href="#testimonials">~/reviews</a></li>
-        <li><a href="#contact">~/contact</a></li>
+<aside class="bryl-sidebar">
+  <div class="sidebar-top">
+    <a href="#top" class="brand">jaimes<br>manicar</a>
+    <nav class="bryl-nav">
+      <ul id="navLinks">
+        <li><a href="#work">01 &mdash; work</a></li>
+        <li><a href="#achievements">02 &mdash; achievements</a></li>
+        <li><a href="#toolkit">03 &mdash; toolkit</a></li>
+        <li><a href="#journey">04 &mdash; experience</a></li>
+        <li><a href="#testimonials">05 &mdash; recommendations</a></li>
+        <li><a href="#contact">06 &mdash; contact</a></li>
       </ul>
     </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   </div>
-</header>
+  <div class="sidebar-bottom">
+    <div class="bryl-contact-links">
+      <p class="micro-label" style="margin-bottom: 12px; color: var(--text-faint);">For work, collabs & everything else, reach me at</p>
+      <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg> manicar.jaimesaldrich.trecero@gmail.com</a>
+    </div>
+  </div>
+</aside>
 
-<main id="top">
+<main id="top" class="bryl-main">
 
   <!-- HERO -->
   <section class="hero surface-ink">
@@ -604,25 +609,7 @@
 
 </main>
 
-<footer class="site-footer surface-ink">
-  <div class="wrap">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="#top" class="brand">jaimes<span class="dot">.</span>manicar</a>
-        <p>Thanks for visiting. Always up for collaborating, so reach out if something here caught your eye.</p>
-      </div>
-      <div class="social-row">
-        <a href="https://github.com/h4yme" aria-label="GitHub" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.9-1.29 2.74-1.02 2.74-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
-        <a href="https://linkedin.com/in/jmanicar" aria-label="LinkedIn" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a2 2 0 1 1-4-.02 2 2 0 0 1 4 .02M3.5 8.75h3.9V21H3.5V8.75Zm6.34 0h3.74v1.68h.05c.52-.98 1.8-2.02 3.7-2.02 3.96 0 4.69 2.6 4.69 5.98V21h-3.9v-5.6c0-1.34-.02-3.06-1.87-3.06-1.87 0-2.16 1.46-2.16 2.96V21h-3.9V8.75Z"/></svg></a>
-        <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Jaimes Aldrich Trecero Manicar. Built section by section, like everything else here.</span>
-      <a href="images/NSE_1_Certification_page-0001.jpg" data-lightbox>view certificates</a>
-    </div>
-  </div>
-</footer>
+</div> <!-- End of bryl-layout -->
 
 <div class="lb" id="lightbox">
   <button class="lb-close" id="lbClose">✕</button>
