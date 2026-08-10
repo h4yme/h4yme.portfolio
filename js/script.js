@@ -41,30 +41,6 @@
     });
   }
 
-  /* Automatic Image Skeleton Loader Shimmer */
-  var allImages = document.querySelectorAll('img');
-  allImages.forEach(function(img) {
-    var parent = img.parentElement;
-    if (parent && !parent.classList.contains('no-skeleton')) {
-      parent.classList.add('skeleton-container');
-      if (!img.complete) {
-        img.classList.add('img-loading');
-        parent.classList.add('skeleton');
-        img.addEventListener('load', function() {
-          img.classList.remove('img-loading');
-          img.classList.add('img-loaded');
-          parent.classList.remove('skeleton');
-        });
-        img.addEventListener('error', function() {
-          img.classList.remove('img-loading');
-          parent.classList.remove('skeleton');
-        });
-      } else {
-        img.classList.add('img-loaded');
-      }
-    }
-  });
-
   /* Animated stat counters */
   var counters = document.querySelectorAll(".mono-num[data-count]");
   var countersDone = false;
