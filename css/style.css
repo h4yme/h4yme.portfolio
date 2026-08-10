@@ -157,7 +157,7 @@ p.lede { font-size: 1.0625rem; color: var(--gray-500); max-width: 50ch; line-hei
 }
 
 /* ---------- Components ---------- */
-section { margin-bottom: 6rem; }
+section { margin-bottom: 4rem; width: 100%; max-width: 640px; }
 .wrap { width: 100%; max-width: 48rem; }
 
 /* Buttons */
@@ -368,3 +368,96 @@ input:focus, textarea:focus { outline: none; border-color: var(--gray-500); }
 .lb img { max-height: 90vh; max-width: 90vw; border-radius: var(--radius-m); box-shadow: var(--shadow-hover); }
 .lb-close { position: absolute; top: 1.5rem; right: 2rem; color: var(--gray-400); font-size: 2rem; background: none; border: none; cursor: pointer; transition: color 0.2s; }
 .lb-close:hover { color: var(--ink); }
+
+/* Bryllim 1:1 Layout Classes */
+
+/* Section Headers */
+.bryl-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px dotted var(--gray-300);
+  padding-bottom: 0.5rem;
+}
+.bryl-section-header .title, .bryl-section-header .view-all {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gray-400);
+}
+.bryl-section-header .view-all:hover { color: var(--ink); }
+
+/* Table for Experience */
+.bryl-table {
+  display: flex;
+  flex-direction: column;
+}
+.bryl-row {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--gray-200);
+  align-items: center;
+}
+.bryl-row:last-child { border-bottom: none; }
+.bryl-col { font-size: 13px; }
+.bryl-col.date { font-family: var(--font-mono); color: var(--gray-400); }
+.bryl-col.role { color: var(--ink); font-weight: 500; }
+.bryl-col.company { color: var(--gray-500); text-align: right; }
+
+@media (max-width: 640px) {
+  .bryl-row { grid-template-columns: 60px 1fr; gap: 0.5rem; }
+  .bryl-col.company { grid-column: 2; text-align: left; font-size: 12px; }
+}
+
+/* Stats */
+.status-strip {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.stat .num { font-family: var(--font-ui); font-size: 1.1rem; color: var(--ink); font-weight: 600; }
+.stat .label { font-family: var(--font-mono); font-size: 9px; text-transform: uppercase; letter-spacing: 1px; color: var(--gray-500); }
+
+/* Hero */
+.hero.bryl-section { display: flex; flex-direction: row; gap: 2.5rem; align-items: center; margin-top: 2rem; margin-bottom: 3rem; border: none;}
+.hero-media { width: 140px; height: 140px; border-radius: 4px; overflow: hidden; filter: grayscale(100%); transition: filter 0.3s;}
+.hero-media:hover { filter: grayscale(0%); }
+.hero-content h1 { font-size: 1.5rem; font-weight: 500; margin-bottom: 0.5rem; }
+.hero-content p.lede { font-size: 13px; color: var(--gray-400); line-height: 1.6; max-width: 44ch; margin-bottom: 0.75rem;}
+.hero-links { font-family: var(--font-mono); font-size: 10px; color: var(--gray-500); }
+.hero-links a { margin-right: 4px; }
+
+@media (max-width: 640px) {
+  .hero.bryl-section { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+}
+
+/* Bryllim 1:1 Cards */
+.project-card, .focus-card, .quote-card, .recognition-card, .badge {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-m);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s;
+}
+.project-card:hover, .focus-card:hover, .quote-card:hover, .recognition-card:hover, .badge:hover {
+  border-color: var(--gray-200);
+  background: var(--gray-100);
+}
+.project-card {
+  padding: 1rem; /* inner padding like Bryllim */
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.project-thumb {
+  border-radius: var(--radius-s);
+  border: 1px solid var(--gray-200);
+}
+.project-body { padding: 0 0.5rem; }
