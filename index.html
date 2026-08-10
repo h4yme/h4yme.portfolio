@@ -416,18 +416,21 @@
         </div>
       </div>
 
-      <!-- GITHUB STATS -->
-      <div class="section-head" data-reveal style="margin-top: 80px;">
-        <span class="eyebrow">open source</span>
-        <h2>GitHub Activity.</h2>
-      </div>
-
-      <div class="gh-card" data-reveal style="max-width: 850px; margin: 0 auto; padding: 32px;">
-        <span class="k" style="display: block; margin-bottom: 24px; text-align: center; font-size: 0.9rem; letter-spacing: 0.15em; color: var(--text-dim);">CONTRIBUTION GRAPH</span>
-        <div class="gh-graph-container" style="display: flex; justify-content: center;">
-          <a href="https://github.com/h4yme" target="_blank" rel="noopener" style="display: inline-block;">
-            <img class="skeleton gh-graph-img" src="https://ghchart.rshah.org/56d0c3/h4yme" alt="GitHub Contribution Chart" loading="lazy" style="margin: 0 auto;">
-          </a>
+      <!-- GITHUB ACTIVITY (BRYL MINIMAL) -->
+      <div class="bryl-github-card" id="github-matrix-container" data-reveal data-username="h4yme">
+        <div class="bryl-header">
+          <span class="bryl-title">07 — github</span>
+          <a href="https://github.com/h4yme" target="_blank" rel="noopener" class="bryl-link">@H4YME ↗</a>
+        </div>
+        
+        <div class="bryl-graph-wrapper">
+          <div id="github-matrix">
+            <span style="font-family: var(--mono); font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 1px;">Loading graph...</span>
+          </div>
+        </div>
+        
+        <div class="bryl-footer">
+          <span class="bryl-meta" id="github-total-contributions">CALCULATING CONTRIBUTIONS...</span>
         </div>
       </div>
 

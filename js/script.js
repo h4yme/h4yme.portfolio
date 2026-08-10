@@ -204,6 +204,70 @@
         });
     });
   }
+  /* GitHub Matrix (Bryl Minimal) */
+  async function renderGitHubMatrix() {
+    var container = document.getElementById('github-matrix-container');
+    if (!container) return;
+    
+    var matrixEl = document.getElementById('github-matrix');
+    var totalEl = document.getElementById('github-total-contributions');
+    var username = container.getAttribute('data-username') || 'h4yme';
+    
+    try {
+      var res = await fetch('https://github-contributions.vercel.app/api/v1/' + username);
+      if (!res.ok) throw new Error('API failed');
+      var data = await res.json();
+      
+      var today = new Date();
+      var validDays = data.contributions.filter(function(d) {
+        return new Date(d.date) <= today;
+      });
+      
+      var pastYearDays = validDays.slice(0, 364);
+      pastYearDays.reverse();
+      
+      var total = pastYearDays.reduce(function(sum, d) { return sum + d.count; }, 0);
+      totalEl.textContent = total.toLocaleString() + ' CONTRIBUTIONS IN THE LAST YEAR';
+      
+      var cellSize = 14;
+      var svgWidth = 52 * cellSize;
+      var svgHeight = 7 * cellSize;
+      
+      var svg = '<svg width="100%" viewBox="0 0 ' + svgWidth + ' ' + svgHeight + '" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="max-width: ' + svgWidth + 'px; overflow: visible;">';
+      
+      for (var col = 0; col < 52; col++) {
+        for (var row = 0; row < 7; row++) {
+          var index = col * 7 + row;
+          var day = pastYearDays[index];
+          if (!day) continue;
+          
+          var cx = col * cellSize + (cellSize / 2);
+          var cy = row * cellSize + (cellSize / 2);
+          
+          var r = 1;
+          var opacity = 0.2;
+          
+          // Fallback to evaluating count directly if intensity string is weird
+          var count = day.count;
+          if (count > 0 && count <= 3) { r = 2; opacity = 0.7; }
+          else if (count > 3 && count <= 6) { r = 3.2; opacity = 0.85; }
+          else if (count > 6 && count <= 12) { r = 4.5; opacity = 1; }
+          else if (count > 12) { r = 5.8; opacity = 1; }
+          
+          svg += '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" opacity="'+opacity+'" />';
+        }
+      }
+      svg += '</svg>';
+      matrixEl.innerHTML = svg;
+      
+    } catch (error) {
+      console.error("GitHub Graph error:", error);
+      matrixEl.innerHTML = '<span style="font-family: var(--mono); font-size: 11px; color: var(--text-dim);">Unable to load contributions</span>';
+    }
+  }
+  
+  renderGitHubMatrix();
+
   /* Skeleton Loading Removal */
   document.querySelectorAll('img.skeleton').forEach(function(img) {
     if (img.complete) {
