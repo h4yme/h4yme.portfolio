@@ -138,12 +138,7 @@ p.lede { font-size: 1.0625rem; color: var(--gray-500); max-width: 50ch; line-hei
 }
 .bryl-contact-links a:hover { color: var(--ink); }
 
-.bryl-main {
-  margin-left: 14rem;
-  flex: 1;
-  max-width: 56rem;
-  padding: 4rem 3rem 6rem;
-}
+.bryl-main { margin-left: 14rem; flex: 1; display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem 6rem; }
 
 /* Responsive */
 @media (max-width: 1024px) {
@@ -158,12 +153,12 @@ p.lede { font-size: 1.0625rem; color: var(--gray-500); max-width: 50ch; line-hei
   }
   .sidebar-bottom { display: none; }
   .bryl-nav ul { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
-  .bryl-main { margin-left: 0; padding: 2rem 1.5rem; }
+  .bryl-main { margin-left: 14rem; flex: 1; display: flex; flex-direction: column; align-items: center; padding: 4rem 2rem 6rem; }
 }
 
 /* ---------- Components ---------- */
 section { margin-bottom: 6rem; }
-.wrap { max-width: 42rem; }
+.wrap { width: 100%; max-width: 48rem; }
 
 /* Buttons */
 .btn {
@@ -196,16 +191,19 @@ section { margin-bottom: 6rem; }
 }
 
 /* Hero */
-.hero { display: flex; flex-direction: column; gap: 2rem; }
-.hero-media { 
-  width: 120px; height: 120px; 
-  border-radius: var(--radius-m); 
-  overflow: hidden; 
-  margin-bottom: 1rem;
-  border: 1px solid var(--gray-200);
-}
+/* Hero Redesign (Bryllim Layout) */
+.hero { display: flex; flex-direction: row; gap: 2.5rem; align-items: flex-start; justify-content: center; margin-top: 2rem; }
+.hero-media { flex-shrink: 0; width: 160px; height: 160px; border-radius: var(--radius-m); overflow: hidden; border: 1px solid var(--gray-200); position: relative; }
 .hero-media img { width: 100%; height: 100%; object-fit: cover; }
-.hero-cta { display: flex; gap: 1rem; margin-top: 2rem; }
+.hero-media .tag { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); background: rgba(12,12,15,0.8); backdrop-filter: blur(4px); border: 1px solid var(--gray-300); }
+.hero-content { display: flex; flex-direction: column; }
+.hero-content h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+.hero-content p.lede { font-size: 0.95rem; line-height: 1.6; color: var(--gray-400); max-width: 42ch; }
+.hero-links { display: flex; gap: 1rem; margin-top: 1.5rem; font-family: var(--font-mono); font-size: 11px; color: var(--gray-500); }
+.hero-links a { color: var(--gray-500); transition: color 0.2s; }
+.hero-links a:hover { color: var(--ink); }
+
+.status-strip { display: flex; gap: 3rem; margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--gray-200); justify-content: center; }
 
 .status-strip {
   display: flex;
