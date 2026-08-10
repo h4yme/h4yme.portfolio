@@ -20,15 +20,15 @@
 
 <aside class="bryl-sidebar">
   <div class="sidebar-top">
-    <a href="#top" class="brand">jaimes<br>manicar</a>
+    <a href="index.html" class="brand">jaimes<br>manicar</a>
     <nav class="bryl-nav">
       <ul id="navLinks">
-        <li><a href="#work">01 &mdash; work</a></li>
-        <li><a href="#achievements">02 &mdash; achievements</a></li>
-        <li><a href="#toolkit">03 &mdash; toolkit</a></li>
-        <li><a href="#journey">04 &mdash; experience</a></li>
-        <li><a href="#testimonials">05 &mdash; recommendations</a></li>
-        <li><a href="#contact">06 &mdash; contact</a></li>
+        <li><a href="work.html">01 &mdash; work</a></li>
+        <li><a href="achievements.html">02 &mdash; achievements</a></li>
+        <li><a href="toolkit.html">03 &mdash; toolkit</a></li>
+        <li><a href="experience.html">04 &mdash; experience</a></li>
+        <li><a href="recommendations.html">05 &mdash; recommendations</a></li>
+        <li><a href="contact.html">06 &mdash; contact</a></li>
       </ul>
     </nav>
   </div>
@@ -42,15 +42,15 @@
 
 <main id="top" class="bryl-main">
 
-  <!-- HERO -->
-  <section class="hero bryl-section">
+  <!-- HERO (BRYLLIM LAYOUT) -->
+  <section class="hero">
     <div class="hero-media">
       <img src="images/ManicarPic.JPG" alt="Jaimes Manicar" />
     </div>
     <div class="hero-content">
       <h1>Jaimes Manicar</h1>
-      <p class="lede">I'm a full-stack developer. I build modern web & mobile apps, and these days I'm focused on cloud architecture.</p>
-      <p class="lede">Right now I'm building tools and figuring out system operations. I love turning rough ideas into things people actually use.</p>
+      <p class="lede">IT graduate at Quezon City University, interned as a Software Developer at Excellence Appliance Technologies. I build things like LiteRise — an award-winning adaptive reading app piloted in real classrooms.</p>
+      <p class="lede">Right now I'm building tools and figuring out cloud architecture. I love turning rough ideas into systems people actually use.</p>
       <div class="hero-links">
         <a href="https://github.com/h4yme" target="_blank">github ↗</a> /
         <a href="https://linkedin.com/in/jmanicar" target="_blank">linkedin ↗</a> /
@@ -60,339 +60,28 @@
   </section>
 
   <!-- STATS -->
-  <section class="bryl-section">
+  <section>
     <div class="status-strip" data-reveal>
       <div class="stat">
-        <div class="num"><span class="mono-num" data-count="6">0</span>+</div>
-        <div class="label">YEARS LEARNING</div>
+        <div class="num"><span class="mono-num" data-count="6">0</span></div>
+        <div class="label">years of learning</div>
       </div>
       <div class="stat">
         <div class="num"><span class="mono-num" data-count="300">0</span>+</div>
-        <div class="label">HOURS DEV</div>
+        <div class="label">hours logged</div>
       </div>
       <div class="stat">
         <div class="num"><span class="mono-num" data-count="1">0</span></div>
-        <div class="label">RESEARCH AWARD</div>
+        <div class="label">research award</div>
       </div>
       <div class="stat">
         <div class="num"><span class="mono-num" data-count="5">0</span></div>
-        <div class="label">SYSTEMS SHIPPED</div>
+        <div class="label">systems shipped</div>
       </div>
     </div>
   </section>
 
-  <!-- WORK -->
-  <section class="surface-ink">
-    <div class="wrap">
-      <div class="focus-grid" data-reveal>
-        <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          <h3>Web &amp; Enterprise Development</h3>
-          <p>Building full-stack features and responsive interfaces for enterprise systems using ASP.NET MVC, C#, and modern web technologies.</p>
-        </div>
-        <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          <h3>Mobile App Development</h3>
-          <p>Creating functional Android applications featuring real-time tracking, gamified adaptive difficulty, and REST API integration.</p>
-        </div>
-        <div class="focus-card">
-          <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-          <h3>Database &amp; Cloud Architecture</h3>
-          <p>Designing and optimizing database schemas with T-SQL, and leveraging cloud platforms like Microsoft Azure to keep infrastructure scalable and secure.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WORK -->
-  <section id="work" class="surface-ink">
-    <div class="wrap">
-      <div class="bryl-section-header" data-reveal><span class="title">01 &mdash; projects</span><a href="#" class="view-all">ALL PROJECTS ↗</a></div>
-
-      <div class="filters" data-reveal>
-        <button class="is-active" data-filter="all">all</button>
-        <button data-filter="mobile">mobile</button>
-        <button data-filter="web">web</button>
-        <button data-filter="desktop">desktop</button>
-      </div>
-
-      <div class="project-grid" id="projectGrid" data-reveal>
-
-        <article class="project-card" data-cats="mobile" style="grid-column: span 6;">
-          <div class="project-thumb" style="aspect-ratio: 21/8;">
-            <img class="skeleton" src="images/syncmock.png" alt="Sync app placeholder" loading="lazy">
-            <span class="project-status">android app</span>
-          </div>
-          <div class="project-body">
-            <span class="role">health tech · ai companion</span>
-            <h3><a href="https://sync-app-opal.vercel.app/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">Sync</a></h3>
-            <p>The next generation of cycle intelligence. Integrates cycle prediction, symptom logs, and private partner updates with Luna — an AI health companion.</p>
-            <div class="tag-row" style="align-items: center;">
-              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-                <span class="tag">mobile</span><span class="tag">ai</span><span class="tag">health</span>
-              </div>
-              <a href="https://sync-app-opal.vercel.app/" target="_blank" rel="noopener" class="btn btn-ghost" style="padding: 6px 14px; font-size: 0.75rem; margin-left: auto;">Visit Website ↗</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cats="mobile web" style="grid-column: span 6;">
-          <div class="project-thumb" style="aspect-ratio:21/8;">
-            <img class="skeleton" src="images/mockup (2).png" alt="LiteRise adaptive reading app dashboard" loading="lazy">
-            <span class="project-status">web + android</span>
-          </div>
-          <div class="project-body">
-            <span class="role">flagship · edtech · best research paper 2026</span>
-            <h3>LiteRise</h3>
-            <p>A gamified, adaptive mobile reading app for Grade 3 learners, using Item Response Theory to personalize difficulty across five literacy competencies. Built the web portal dashboard and the Android student app — gamification, real-time progress tracking, adaptive difficulty scaling. Piloted across two public elementary schools with statistically significant gains on every pre/post-assessment metric, and awarded Best Research Paper (Mobile Application Category) at SYNERGY 2026.</p>
-            <div class="tag-row">
-              <span class="tag">android</span><span class="tag">web portal</span><span class="tag">sql</span><span class="tag">azure</span><span class="tag">irt / edtech</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cats="mobile" style="grid-column: span 4;">
-          <div class="project-thumb">
-            <img class="skeleton" src="images/nimblymock.png" alt="Nimbly loan calculator app" loading="lazy">
-            <span class="project-status">android app</span>
-          </div>
-          <div class="project-body">
-            <span class="role">fintech</span>
-            <h3>Nimbly Loan Calculator</h3>
-            <p>An Android financial calculator with Microsoft Azure integration via REST API — multiple loan types, amortization schedules, and offline data handling for when connectivity isn't guaranteed.</p>
-            <div class="tag-row">
-              <span class="tag">android</span><span class="tag">azure</span><span class="tag">rest api</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cats="desktop" style="grid-column: span 2;">
-          <div class="project-thumb" style="aspect-ratio:4/5;">
-            <img class="skeleton" src="images/buseasemock.png" alt="Transport Management System desktop app for Robinsons Novaliches Bus Terminal" loading="lazy">
-            <span class="project-status">desktop app</span>
-          </div>
-          <div class="project-body">
-            <span class="role">operations · robinsons novaliches bus terminal</span>
-            <h3>Transport Management System</h3>
-            <p>A desktop application for scheduling, ticketing, and day-to-day operations at a real bus terminal — real-time departure and arrival tracking, passenger information management, and operational reporting.</p>
-            <div class="tag-row">
-              <span class="tag">java</span><span class="tag">desktop</span><span class="tag">reporting</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cats="web">
-          <div class="project-thumb">
-            <img class="skeleton" src="images/vauzyemock.png" alt="Vauzye flight booking website" loading="lazy">
-            <span class="project-status">website</span>
-          </div>
-          <div class="project-body">
-            <span class="role">travel booking</span>
-            <h3>Vauzye</h3>
-            <p>An online travel booking and information site for searching flights and hotel stays — full booking workflows, travel guides, and a responsive layout built with HTML, CSS, JavaScript, PHP, and Bootstrap.</p>
-            <div class="tag-row">
-              <span class="tag">php</span><span class="tag">bootstrap</span><span class="tag">web</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-card" data-cats="web">
-          <div class="project-thumb">
-            <img class="skeleton" src="images/llismock.png" alt="Leandro Locsin Integrated School informational website" loading="lazy">
-            <span class="project-status">website</span>
-          </div>
-          <div class="project-body">
-            <span class="role">education</span>
-            <h3>LLIS School Website</h3>
-            <p>An informational website for Leandro Locsin Integrated School — a digital hub for news, announcements, events, and media galleries, responsive across desktop and mobile.</p>
-            <div class="tag-row">
-              <span class="tag">web</span><span class="tag">responsive</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements" class="surface-ink">
-    <div class="wrap">
-      <div class="bryl-section-header" data-reveal><span class="title">03 &mdash; certifications</span><a href="#" class="view-all">ALL CERTIFICATIONS ↗</a></div>
-
-      <div class="recognition-card" data-reveal style="margin-bottom:22px; border-color:var(--amber-dim);">
-        <span class="k">MAY 2026 · SYNERGY STUDENT RESEARCH CONFERENCE, QCU</span>
-        <div style="display:flex; align-items:baseline; gap:16px; flex-wrap:wrap; margin-top:10px;">
-          <h3 style="font-family:var(--display); text-transform:uppercase; font-size:clamp(1.5rem,3vw,2.1rem); letter-spacing:0;">Best Research Paper</h3>
-          <span class="tag" style="border-color:var(--amber); color:var(--amber);">Mobile Application Category</span>
-        </div>
-        <p style="margin-top:12px; max-width:64ch;">Awarded for <em>"LiteRise: A Gamified Application for Enhanced Fluency and Comprehension Using Item Response Theory for Grade 3 Learners,"</em> evaluated by a guest panel of judges. Represented the research group as mobile application developer and presenter at the conference.</p>
-        <div class="award-gallery">
-          <a href="images/award (2).jpeg" data-lightbox><img class="skeleton" src="images/award (2).jpeg" alt="SYNERGY 2026 research conference — photo 1" loading="lazy"></a>
-          <a href="images/award (5).jpeg" data-lightbox><img class="skeleton" src="images/award (5).jpeg" alt="SYNERGY 2026 research conference — photo 2" loading="lazy"></a>
-          <a href="images/award (3).jpeg" data-lightbox><img class="skeleton" src="images/award (3).jpeg" alt="SYNERGY 2026 research conference — photo 3" loading="lazy"></a>
-          <a href="images/award.jpeg" data-lightbox><img class="skeleton" src="images/award.jpeg" alt="SYNERGY 2026 research conference — photo 4" loading="lazy"></a>
-          <a href="images/award (4).jpeg" data-lightbox><img class="skeleton" src="images/award (4).jpeg" alt="SYNERGY 2026 research conference — photo 5" loading="lazy"></a>
-        </div>
-      </div>
-
-      <div class="ach-grid" data-reveal>
-        <div>
-          <p style="color:var(--text-dim); margin-bottom:22px; max-width:48ch;">Two Fortinet network-security certifications earned alongside coursework — foundational credentials in how networks are secured, ahead of deeper cloud-security specialization.</p>
-          <div class="badge-row">
-            <a class="badge" href="images/NSE_1_Certification_page-0001.jpg" data-lightbox>
-              <div class="badge-shape"><img class="skeleton" src="images/NSE 1 Logo.png" alt="Fortinet NSE 1 badge"></div>
-              <div class="badge-cap"><b>Fortinet NSE 1</b>Network Security Awareness</div>
-            </a>
-            <a class="badge" href="images/NSE_2_Certification_page-0001.jpg" data-lightbox>
-              <div class="badge-shape"><img class="skeleton" src="images/NSE 2 Logo.png" alt="Fortinet NSE 2 badge"></div>
-              <div class="badge-cap"><b>Fortinet NSE 2</b>Network Security Associate</div>
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <div class="recognition-card">
-            <span class="k">PEER RECOGNITION</span>
-            <div class="metric mono-num">5+</div>
-            <p>Group and personal projects where teammates have specifically credited Jaimes as the one who kept the team on track, from debugging sessions to deadline pressure.</p>
-          </div>
-          <div class="recognition-card">
-            <span class="k">TRUSTED WITH LEAD ROLES</span>
-            <p>Repeatedly asked to lead project teams by classmates — see what they say about it in <a href="#testimonials" style="color:var(--cyan); text-decoration:none;">reviews →</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TOOLKIT -->
-  <section id="toolkit" class="surface-ink tk-section">
-    <div class="wrap">
-      <div class="bryl-section-header" data-reveal><span class="title">04 &mdash; stack</span><a href="#" class="view-all">VIEW ALL ↗</a></div>
-    </div>
-
-    <!-- ROW 1 -->
-    <div class="tk-carousel-row" data-reveal>
-      <div class="tk-carousel-viewport">
-        <div class="tk-carousel-track">
-          <!-- GROUP 1 -->
-          <div class="tk-carousel-group">
-            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
-            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
-          </div>
-          <!-- GROUP 2 -->
-          <div class="tk-carousel-group" aria-hidden="true">
-            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
-            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
-          </div>
-          <!-- GROUP 3 -->
-          <div class="tk-carousel-group" aria-hidden="true">
-            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
-            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
-          </div>
-          <!-- GROUP 4 -->
-          <div class="tk-carousel-group" aria-hidden="true">
-            <div class="tk-logo-card"><i class="devicon-csharp-plain colored"></i><span>C#</span></div>
-            <div class="tk-logo-card"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-            <div class="tk-logo-card"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
-            <div class="tk-logo-card"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-            <div class="tk-logo-card"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-            <div class="tk-logo-card"><i class="devicon-microsoftsqlserver-plain colored"></i><span>SQL Server</span></div>
-            <div class="tk-logo-card"><i class="devicon-azuresqldatabase-plain colored"></i><span>T-SQL</span></div>
-            <div class="tk-logo-card"><i class="devicon-oracle-original colored"></i><span>PL/SQL</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ROW 2 -->
-    <div class="tk-carousel-row" data-reveal>
-      <div class="tk-carousel-viewport">
-        <div class="tk-carousel-track tk-carousel-reverse">
-          <!-- GROUP 1 -->
-          <div class="tk-carousel-group">
-            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
-            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
-            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
-            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
-            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="tk-logo-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
-            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
-          </div>
-          <!-- GROUP 2 -->
-          <div class="tk-carousel-group" aria-hidden="true">
-            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
-            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
-            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
-            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
-            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="tk-logo-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
-            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
-          </div>
-          <!-- GROUP 3 -->
-          <div class="tk-carousel-group" aria-hidden="true">
-            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
-            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
-            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
-            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
-            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="tk-logo-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
-            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
-          </div>
-          <!-- GROUP 4 -->
-          <div class="tk-carousel-group" aria-hidden="true">
-            <div class="tk-logo-card"><i class="devicon-dot-net-plain colored"></i><span>ASP.NET MVC</span></div>
-            <div class="tk-logo-card"><i class="devicon-bootstrap-plain colored"></i><span>Bootstrap</span></div>
-            <div class="tk-logo-card"><i class="devicon-jquery-plain colored"></i><span>jQuery</span></div>
-            <div class="tk-logo-card"><i class="devicon-androidstudio-plain colored"></i><span>Android Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
-            <div class="tk-logo-card"><i class="devicon-firebase-plain colored"></i><span>Firebase</span></div>
-            <div class="tk-logo-card"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="tk-logo-card"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="tk-logo-card"><i class="devicon-visualstudio-plain colored"></i><span>Visual Studio</span></div>
-            <div class="tk-logo-card"><i class="devicon-javascript-plain colored"></i><span>AJAX</span></div>
-            <div class="tk-logo-card"><i class="devicon-react-original colored"></i><span>React Native</span></div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- GITHUB ACTIVITY (BRYL MINIMAL) -->
+<!-- GITHUB ACTIVITY (BRYL MINIMAL) -->
       <div class="bryl-github-card" id="github-matrix-container" data-reveal data-username="h4yme">
         <div class="bryl-header">
           <span class="bryl-title">07 — github</span>
@@ -412,172 +101,6 @@
 
     </div>
   </section>
-  <!-- JOURNEY / BUILD LOG -->
-  <section id="journey" class="surface-paper">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">build log</span>
-        <h2>The journey so far.</h2>
-        <p class="lede">Education, hands-on experience, and the interests that keep pulling him back in — read like a changelog.</p>
-      </div>
-
-      <div data-reveal>
-        <p class="log-group-label">education</p>
-        <div class="log">
-          <div class="log-entry">
-            <span class="log-tag">2022</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">August 2022 — July 2026</span>
-              <h4>BS in Information Technology, Graduate</h4>
-              <p class="org">Quezon City University</p>
-            </div>
-          </div>
-          <div class="log-entry">
-            <span class="log-tag">2020</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2020 — 2022</span>
-              <h4>Technical Vocational — ICT, Computer Programming</h4>
-              <p class="org">Leandro Locsin Integrated School</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="log-group-label">experience</p>
-        <div class="log">
-          <div class="log-entry">
-            <span class="log-tag">2025</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">September 2025 — April 2026</span>
-              <h4>Software Developer Intern</h4>
-              <p class="org">Excellence Appliance Technologies, Inc. · Quezon City</p>
-              <p class="desc">Developed and maintained an in-house enterprise system on ASP.NET MVC and Microsoft SQL Server for sales, inventory, and e-commerce processing. Wrote T-SQL stored procedures for location management, promos, and order approval workflows, built full-stack features end to end, and generated Crystal Reports for sales performance.</p>
-            </div>
-          </div>
-          <div class="log-entry">
-            <span class="log-tag">2022</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2022 — 2026</span>
-              <h4>IT Student, Quezon City University</h4>
-              <p class="desc">Hands-on coursework across programming, cybersecurity, and cloud computing.</p>
-            </div>
-          </div>
-          <div class="log-entry is-current">
-            <span class="log-tag">2020 →</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2020 — Present</span>
-              <h4>Independent &amp; School Projects</h4>
-              <p class="desc">Self-directed and group work behind Sync, LiteRise, Nimbly, the Transport Management System, Vauzye, and the LLIS school website — most of what's in the work section above started here.</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="log-group-label">interests</p>
-        <div class="log">
-          <div class="log-entry is-current">
-            <span class="log-tag">2023 →</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2023 — Present</span>
-              <h4>Cloud computing</h4>
-              <p class="desc">Leaning toward cloud platforms as the next specialization — already integrating Microsoft Azure into production apps, with AWS and Google Cloud next on the list.</p>
-            </div>
-          </div>
-          <div class="log-entry is-current">
-            <span class="log-tag">2023 →</span>
-            <span class="log-node"></span>
-            <div class="log-body">
-              <span class="range">2023 — Present</span>
-              <h4>Database Design &amp; Optimization</h4>
-              <p class="desc">Diving deeper into T-SQL and Microsoft SQL Server to build more robust, scalable, and efficient backend architectures for enterprise systems.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="surface-ink">
-    <div class="wrap">
-      <div class="section-head" data-reveal>
-        <span class="eyebrow">reviews</span>
-        <h2>What teammates say.</h2>
-      </div>
-      <div class="quote-grid" data-reveal>
-        <div class="quote-card">
-          <span class="approve">approved by a teammate</span>
-          <p class="quote">"Has been an incredible teammate and the best developer friend I've had during school projects. His technical expertise and dedication are unmatched — he consistently took the lead and ensured our projects were completed successfully."</p>
-          <div class="who"><b>Ronaldo Saligao</b><br><span>Quezon City University · 11/30/2024</span></div>
-        </div>
-        <div class="quote-card">
-          <span class="approve">approved by a teammate</span>
-          <p class="quote">"Has been an invaluable partner in project making. We've spent countless hours debugging code and brainstorming ideas together. His sharp mind and problem-solving skills kept me motivated, even during the toughest challenges."</p>
-          <div class="who"><b>Kevin Landicho</b><br><span>9/10/2024</span></div>
-        </div>
-        <div class="quote-card">
-          <span class="approve">approved by a teammate</span>
-          <p class="quote">"A trustworthy leader who makes sure everyone in the group is responsible for their work, and that no one feels rushed when they're doing it."</p>
-          <div class="who"><b>Brylle Lupang</b><br><span>12/01/2024</span></div>
-        </div>
-        <div class="quote-card">
-          <span class="approve">approved by a teammate</span>
-          <p class="quote">"A valuable asset to any team. His strong leadership skills, combined with his technical expertise and critical thinking, make him an invaluable contributor and a reliable team player."</p>
-          <div class="who"><b>John Rey Rosales</b><br><span>11/11/2024</span></div>
-        </div>
-        <div class="quote-card">
-          <span class="approve">approved by a colleague</span>
-          <p class="quote">"A leadership style that motivates others, builds trust, and helps the team achieve its goals."</p>
-          <div class="who"><b>Jerico Francisco</b><br><span>10/22/2024</span></div>
-        </div>
-        <div class="quote-card">
-          <span class="approve">references on file</span>
-          <p class="quote">Additional references available on request — including colleagues from Bestlink College of the Philippines and Quezon City University.</p>
-          <div class="who"><b>Juliun Kyle M. Berog</b><br><span>Bestlink College of the Philippines</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="surface-ink">
-    <div class="wrap">
-      <div class="contact-grid" data-reveal>
-        <div>
-          <span class="eyebrow">quick contact</span>
-          <h2>Leave a message.</h2>
-          <p class="lede">Open to internship, junior developer, and collaboration opportunities — or just talking shop about cloud and full-stack development. Usually replies within a day or two.</p>
-          <div style="margin-top:28px; display:flex; flex-direction:column; gap:10px; font-family:var(--mono); font-size:0.86rem;">
-            <a href="mailto:manicar.jaimesaldrich.trecero@gmail.com" style="text-decoration:none; color:var(--text-dim);">manicar.jaimesaldrich.trecero@gmail.com</a>
-            <a href="tel:+639213336610" style="text-decoration:none; color:var(--text-dim);">+63 921 333 6610</a>
-            <a href="https://linkedin.com/in/jmanicar" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-dim);">linkedin.com/in/jmanicar</a>
-            <a href="https://github.com/h4yme" target="_blank" rel="noopener" style="text-decoration:none; color:var(--text-dim);">github.com/h4yme</a>
-          </div>
-        </div>
-        <form id="contactForm">
-          <div class="field">
-            <label for="name2">your name</label>
-            <input type="text" id="name2" name="from_name" placeholder="Juan Dela Cruz" required>
-          </div>
-          <div class="field">
-            <label for="email">your email</label>
-            <input type="email" id="email" name="reply_to" placeholder="you@email.com" required>
-          </div>
-          <div class="field">
-            <label for="message">your message</label>
-            <textarea id="message" name="message" rows="4" placeholder="Tell me about the project or role..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary" id="submitBtn">Send message</button>
-          <p class="form-note">— or email directly at manicar.jaimesaldrich.trecero@gmail.com</p>
-        </form>
-      </div>
-    </div>
-  </section>
-
 </main>
 
 </div> <!-- End of bryl-layout -->
