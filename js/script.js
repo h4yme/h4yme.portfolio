@@ -214,9 +214,17 @@
     var username = container.getAttribute('data-username') || 'h4yme';
     
     try {
-      var res = await fetch('https://github-contributions.vercel.app/api/v1/' + username);
-      if (!res.ok) throw new Error('API failed');
-      var data = await res.json();
+      var data;
+      try {
+        var res = await fetch('https://github-contributions.vercel.app/api/v1/' + username);
+        if (!res.ok) throw new Error('Primary API failed');
+        data = await res.json();
+      } catch (e) {
+        console.warn("Primary API blocked by CORS, using Vercel proxy...");
+        var res2 = await fetch('/api/github?username=' + username);
+        if (!res2.ok) throw new Error('Proxy API failed');
+        data = await res2.json();
+      }
       
       var today = new Date();
       var validDays = data.contributions.filter(function(d) {
