@@ -252,15 +252,15 @@
           var cx = col * cellSize + (cellSize / 2);
           var cy = row * cellSize + (cellSize / 2);
           
-          var r = 1;
-          var opacity = 0.2;
+          var r = 1.5;
+          var opacity = 0.25;
           
           // Fallback to evaluating count directly if intensity string is weird
           var count = day.count;
-          if (count > 0 && count <= 3) { r = 2; opacity = 0.7; }
-          else if (count > 3 && count <= 6) { r = 3.2; opacity = 0.85; }
-          else if (count > 6 && count <= 12) { r = 4.5; opacity = 1; }
-          else if (count > 12) { r = 5.8; opacity = 1; }
+          if (count > 0 && count <= 3) { r = 2.5; opacity = 0.7; }
+          else if (count > 3 && count <= 6) { r = 3.5; opacity = 0.85; }
+          else if (count > 6 && count <= 12) { r = 4.8; opacity = 1; }
+          else if (count > 12) { r = 6; opacity = 1; }
           
           svg += '<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" opacity="'+opacity+'" />';
         }
