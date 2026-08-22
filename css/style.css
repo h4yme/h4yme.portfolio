@@ -408,12 +408,30 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   mask-image: linear-gradient(to top, black 0%, transparent 60%);
   -webkit-mask-image: linear-gradient(to top, black 0%, transparent 60%);
   pointer-events: none;
+  z-index: 2;
 }
 .hero-photo:hover { filter: none; }
 .hero-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+.hero-photo .photo-hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.hero-photo .photo-main {
+  position: relative;
+  z-index: 1;
+}
+.hero-photo:hover .photo-hover {
+  opacity: 1;
+}
+.hero-photo:hover .photo-main {
+  opacity: 0;
 }
 
 .hero-text {
